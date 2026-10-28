@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#091c2a" />
+  <meta name="description" content="FinanIA: protótipo educativo de finanças pessoais criado para o desafio Vibe Coding da DIO." />
+  <title>FinanIA | Finanças com clareza</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Menu principal">
+      <a class="brand" href="#dashboard" aria-label="FinanIA — Início"><span class="brand-symbol">✦</span><span>Finan<span class="accent">IA</span><small>Controle com clareza</small></span></a>
+      <div class="nav-label">ESPAÇO FINANCEIRO</div>
+      <nav class="nav-list">
+        <button class="nav-button active" data-screen="dashboard" aria-current="page"><span>▦</span> Visão geral</button>
+        <button class="nav-button" data-screen="chat"><span>◉</span> Conversar</button>
+        <button class="nav-button" data-screen="goals"><span>◎</span> Minhas metas</button>
+        <button class="nav-button" data-screen="transactions"><span>⇄</span> Lançamentos</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-chip">✧ Protótipo educacional da DIO</div><p>Dados fictícios ou locais. Sem conexão bancária.</p></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="eyebrow">MEU ESPAÇO FINANCEIRO <span class="dot"></span> DEMONSTRAÇÃO</div><button id="reset-data" class="btn btn-ghost btn-small" type="button">Limpar meus dados</button></header>
+      <section id="screen-dashboard" class="screen">
+        <div class="page-header"><div><p class="overline">SEU DINHEIRO, SEU RITMO</p><h1>Bem-vindo ao Finan<span class="accent">IA</span> <span class="wave">✳</span></h1><p>Uma maneira mais simples de acompanhar o que entra, o que sai e onde você quer chegar.</p></div><button type="button" class="btn btn-primary" data-go="chat">+ Novo lançamento</button></div>
+        <div class="highlight"><div><p>SEU PRÓXIMO PASSO</p><h2>Mais controle, menos complicação.</h2><span>Registre uma movimentação conversando com o assistente e acompanhe a evolução das suas metas.</span></div><button type="button" class="btn btn-light" data-go="chat">Começar agora <span aria-hidden="true">↗</span></button><div class="highlight-shape" aria-hidden="true">✳</div></div>
+        <div class="stats-grid" aria-label="Resumo financeiro"><article class="stat"><span class="stat-icon">⌁</span><div class="stat-title">Saldo total</div><div class="stat-value" id="balance">R$ 0,00</div><div class="stat-sub">Receitas menos despesas</div></article><article class="stat"><span class="stat-icon positive">↗</span><div class="stat-title">Entradas</div><div class="stat-value" id="income">R$ 0,00</div><div class="stat-sub">Receitas registradas</div></article><article class="stat"><span class="stat-icon negative">↘</span><div class="stat-title">Saídas</div><div class="stat-value" id="expenses">R$ 0,00</div><div class="stat-sub">Despesas registradas</div></article></div>
+        <div class="content-grid"><article class="panel"><div class="panel-title"><div><p class="overline">ONDE SEU DINHEIRO VAI</p><h2>Gastos por categoria</h2></div><span class="panel-icon">◷</span></div><div id="category-chart" class="category-chart"></div></article><article class="panel insights"><div class="panel-title"><div><p class="overline">FINANÇAS MAIS INTELIGENTES</p><h2>Seu resumo financeiro</h2></div><span class="panel-icon">✦</span></div><div id="insights-content"></div></article></div>
+        <article class="panel recent"><div class="panel-title"><div><p class="overline">ACOMPANHAMENTO</p><h2>Últimas movimentações</h2></div><button class="text-button" type="button" data-go="transactions">Ver todas ↗</button></div><div id="recent-transactions"></div></article>
+      </section>
+      <section id="screen-chat" class="screen" hidden>
+        <div class="page-header"><div><p class="overline">UM JEITO MAIS NATURAL DE ORGANIZAR</p><h1>Converse com seu dinheiro</h1><p>Escreva como você falaria normalmente. Revise os dados antes de salvar.</p></div></div>
+        <div class="notice">ℹ️ Este demonstrador interpreta frases por <strong>regras locais</strong>; não utiliza IA generativa nem acessa contas bancárias.</div>
+        <div class="chat-panel panel"><div id="chat-messages" class="chat-messages" aria-live="polite"><div class="bubble assistant">Olá! 👋 Sou o assistente demonstrativo do FinanIA. Experimente: <strong>“Gastei R$ 45,90 no mercado”</strong>, <strong>“Recebi 3200 de salário”</strong> ou <strong>“Como economizar?”</strong></div></div>
+          <div id="transaction-preview" class="preview" hidden><h3>Confirme seu lançamento</h3><p>O texto foi interpretado automaticamente. Confira e corrija se necessário.</p><div class="preview-fields"><label>Tipo<select id="preview-type"><option value="expense">Despesa</option><option value="income">Receita</option></select></label><label>Categoria<select id="preview-category"></select></label><label>Descrição<input id="preview-description" maxlength="100" /></label><label>Valor (R$)<input id="preview-amount" type="number" min="0.01" max="999999999" step="0.01" inputmode="decimal" /></label></div><div class="preview-actions"><button id="cancel-preview" class="btn btn-ghost" type="button">Cancelar</button><button id="confirm-preview" class="btn btn-primary" type="button">Confirmar e salvar</button></div></div>
+          <form id="chat-form" class="chat-form"><label for="chat-input" class="sr-only">Sua mensagem</label><input id="chat-input" autocomplete="off" maxlength="200" placeholder="Ex.: Paguei R$ 65,90 de internet" required /><button class="btn btn-primary" type="submit">Enviar ↗</button></form></div>
+        <div class="suggestions"><span>Experimente:</span><button type="button" data-example="Gastei R$ 48,50 no supermercado">Compra no mercado</button><button type="button" data-example="Recebi R$ 3500 de salário">Registrar salário</button><button type="button" data-example="Como economizar?">Pedir dicas</button></div>
+      </section>
+      <section id="screen-goals" class="screen" hidden><div class="page-header"><div><p class="overline">OBJETIVOS QUE GANHAM FORMA</p><h1>Minhas metas</h1><p>Pequenas conquistas também merecem ser acompanhadas.</p></div></div><div class="content-grid goals-layout"><article class="panel"><div class="panel-title"><div><p class="overline">CRIAR UMA NOVA META</p><h2>O que você quer conquistar?</h2></div></div><form id="goal-form" class="form-stack"><label>Nome da meta<input id="goal-name" maxlength="60" placeholder="Ex.: Reserva de emergência" required /></label><label>Valor desejado (R$)<input id="goal-target" type="number" min="0.01" max="999999999" step="0.01" placeholder="3000" required /></label><label>Quanto já economizou? (R$)<input id="goal-current" type="number" min="0" max="999999999" step="0.01" value="0" required /></label><button class="btn btn-primary" type="submit">Criar meta</button><p class="form-feedback" id="goal-feedback" role="status"></p></form></article><article class="panel"><div class="panel-title"><div><p class="overline">MEUS OBJETIVOS</p><h2>Progresso das metas</h2></div></div><div id="goals-list"></div></article></div></section>
+      <section id="screen-transactions" class="screen" hidden><div class="page-header"><div><p class="overline">HISTÓRICO TRANSPARENTE</p><h1>Seus lançamentos</h1><p>Confira suas entradas e saídas. Você pode excluir lançamentos incorretos.</p></div><button type="button" class="btn btn-primary" data-go="chat">+ Adicionar pelo chat</button></div><article class="panel"><div class="panel-title"><div><p class="overline">MOVIMENTAÇÕES</p><h2>Histórico completo</h2></div><button id="seed-data" class="btn btn-ghost btn-small" type="button">Carregar exemplo fictício</button></div><div id="all-transactions"></div></article></section>
+      <footer class="footer">FinanIA · Projeto educacional para o desafio Vibe Coding da DIO. <span>Nenhuma operação bancária é realizada.</span></footer>
+    </main>
+  </div>
+  <script src="finance-engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
