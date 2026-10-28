@@ -135,7 +135,6 @@ Este projeto já está publicado em [repositório **público**](https://github.c
 
 ## 📚 Referências
 - [Repositório oficial da DIO](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas)
-- [Vídeo complementar fornecido no desafio](https://youtu.be/t0OH4mWazvc) — conteúdo não transcrito neste repositório
 - ChatGPT — ferramenta utilizada para planejamento, construção, revisão e documentação.
 - [Lovable](https://lovable.dev/) e [Microsoft Copilot](https://copilot.microsoft.com/) — ferramentas alternativas, **não utilizadas** neste processo.
 
