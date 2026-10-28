@@ -59,4 +59,6 @@ Abrangência: interpretação de despesas, receitas, números, entradas inválid
 
 As capturas enviadas pelo participante permitem conferir **valores do dashboard, salvamento do gasto no histórico e atualização do progresso de metas**. Consulte [`EVIDENCIAS_TESTES_REAIS.md`](EVIDENCIAS_TESTES_REAIS.md), que separa resultados vistos de testes ainda pendentes.
 
-**Pendente:** afirmar que `F5` preserva os registros só após confirmação explícita do participante. Não deduzir persistência de capturas de tela estáticas.
+**Validação complementar da versão online em 28/10/2026:** o participante informou que a segunda captura do GitHub Pages foi realizada após atualizar a página com `F5`. Nela permanecem os seis lançamentos fictícios, entradas de **R$ 3.500,00**, despesas de **R$ 682,10** e saldo de **R$ 2.817,90**. Assim, **a persistência dos lançamentos e dos totais foi aprovada no navegador utilizado**, com base na confirmação do participante e na conferência visual.
+
+**Ainda não verificado na versão online:** persistência de metas após `F5`, exclusão/cancelamento de movimentações, testes em celular e testes com pessoas externas. A captura está nesta conversa; ainda não foi incorporada ao diretório `assets/evidencias` do repositório.
