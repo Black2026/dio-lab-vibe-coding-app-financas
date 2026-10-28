@@ -61,4 +61,6 @@ As capturas enviadas pelo participante permitem conferir **valores do dashboard,
 
 **Validação complementar da versão online em 28/10/2026:** o participante informou que a segunda captura do GitHub Pages foi realizada após atualizar a página com `F5`. Nela permanecem os seis lançamentos fictícios, entradas de **R$ 3.500,00**, despesas de **R$ 682,10** e saldo de **R$ 2.817,90**. Assim, **a persistência dos lançamentos e dos totais foi aprovada no navegador utilizado**, com base na confirmação do participante e na conferência visual.
 
+**Segundo ciclo online concluído (28/10/2026):** após registrar pelo chat a despesa **“Gastei R$ 45,90 no supermercado”**, o participante confirmou que pressionou `F5` e enviou uma captura do dashboard com **R$ 3.500,00 de entradas, R$ 728,00 de saídas, R$ 2.772,00 de saldo** e **R$ 381,60 em Alimentação**. A compra de R$ 45,90 consta entre as movimentações recentes. Resultado: **registro, recálculo e persistência dos lançamentos aprovados no navegador testado**.
+
 **Ainda não verificado na versão online:** persistência de metas após `F5`, exclusão/cancelamento de movimentações, testes em celular e testes com pessoas externas. A captura está nesta conversa; ainda não foi incorporada ao diretório `assets/evidencias` do repositório.
