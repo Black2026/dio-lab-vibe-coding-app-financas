@@ -5,6 +5,13 @@
 ## 🎯 Desafio e proposta
 O FinanIA é o conceito de um aplicativo de controle financeiro pensado para pessoas iniciantes. Seu diferencial é permitir **registrar receitas e despesas por uma conversa simples**, organizar categorias, acompanhar metas e obter dicas educativas. O desafio original da DIO avalia principalmente a qualidade dos prompts, a definição do MVP e a reflexão sobre Vibe Coding; a demonstração codificada presente neste repositório é um **extra opcional**.
 
+## 🌐 Demonstração publicada
+
+- **[Abrir o FinanIA no GitHub Pages](https://black2026.github.io/dio-lab-vibe-coding-app-financas/)**
+- [Repositório do projeto na conta Black2026](https://github.com/Black2026/dio-lab-vibe-coding-app-financas)
+
+O aplicativo é um protótipo educacional. As movimentações ficam no `localStorage` do navegador, sem login ou sincronização com contas bancárias.
+
 ## ✨ O que o aplicativo faz
 1. Interpreta exemplos como “Gastei R$ 45,90 no mercado” e solicita confirmação editável.
 2. Sugere categorias de despesas conforme palavras-chave.
@@ -85,7 +92,7 @@ node --test tests/finance-engine.test.cjs
 ```
 
 ## 🧪 Critérios de validação
-O núcleo financeiro passou por **11 testes automatizados** executados localmente. O participante também apresentou **seis capturas reais do aplicativo**, e os valores visíveis foram conferidos em [`docs/EVIDENCIAS_TESTES_REAIS.md`](docs/EVIDENCIAS_TESTES_REAIS.md). A persistência após F5, os testes mobile e os testes com outros participantes permanecem pendentes. Consulte [`docs/VALIDACAO.md`](docs/VALIDACAO.md); suas metas de sucesso ainda são **hipóteses**, não medições obtidas.
+O núcleo financeiro passou por **11 testes automatizados** executados localmente. O participante também apresentou **seis capturas reais do aplicativo**, e os valores visíveis foram conferidos em [`docs/EVIDENCIAS_TESTES_REAIS.md`](docs/EVIDENCIAS_TESTES_REAIS.md). A persistência de lançamentos e metas após `F5` foi validada pelo participante na versão publicada. Os testes mobile, de acessibilidade e com outros participantes permanecem pendentes. Consulte [`docs/VALIDACAO.md`](docs/VALIDACAO.md); suas metas de sucesso ainda são **hipóteses**, não medições obtidas.
 
 ## 📸 Evidências reais do protótipo e processo com IA
 
@@ -114,7 +121,7 @@ A reflexão autoral foi **aprovada pelo participante em 28/10/2026** e está pub
 - **Aprendizados:** prompts claros, escopo, critérios objetivos e validação das sugestões da IA.
 - **Próximos passos:** melhorar a interpretação, estudar integração segura com IA e ampliar recursos.
 
-O assistente demonstrativo não utiliza IA generativa. A persistência após `F5`, os testes de cancelamento/edição e a interface mobile permanecem pendentes de validação manual, sem impedir que o conceito do desafio seja documentado honestamente.
+O assistente demonstrativo não utiliza IA generativa. A persistência de lançamentos e metas após `F5` foi confirmada no navegador utilizado nos testes online; cancelamento/edição e interface mobile permanecem pendentes de validação manual, sem impedir que o conceito do desafio seja documentado honestamente.
 
 ## 🔒 Segurança, limitações e privacidade
 - Não utilizar CPF, senha, informações bancárias reais ou tokens em testes.
@@ -124,7 +131,7 @@ O assistente demonstrativo não utiliza IA generativa. A persistência após `F5
 - Em uma versão real, seriam necessários controles adicionais de segurança e conformidade com LGPD.
 
 ## ✅ Entrega à DIO
-Publique este projeto em repositório **público** e compartilhe o link na atividade correspondente da DIO. A captura da revisão com ChatGPT está anexada e a reflexão foi aprovada. Antes de entregar, conclua ou descreva como limitações os testes manuais pendentes. Veja o [guia completo de entrega](docs/ENTREGA_DIO.md).
+Este projeto já está publicado em [repositório **público**](https://github.com/Black2026/dio-lab-vibe-coding-app-financas) e possui uma [demonstração online](https://black2026.github.io/dio-lab-vibe-coding-app-financas/). A captura da revisão com ChatGPT está anexada e a reflexão foi aprovada. **O envio do link na atividade da plataforma DIO continua sendo uma ação do participante.** Testes manuais ainda pendentes estão documentados como limitações. Veja o [guia completo de entrega](docs/ENTREGA_DIO.md).
 
 ## 📚 Referências
 - [Repositório oficial da DIO](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas)
